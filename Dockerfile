@@ -11,7 +11,9 @@ USER node
 EXPOSE 9000
 
 COPY --chown=node:node ./package.json .
-COPY --chown=node:node . .
+COPY --chown=node:node ./index.html .
+COPY --chown=node:node ./server.js .
+COPY --chown=node:node ./src ./src
 
 RUN chmod -R 777 /home/node/app
 RUN npm install -D --force
