@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    container_name: rtsp_player-webapp
+    build: .
+    restart: unless-stopped
+    ports:
+      - "9005:9000"
+
+networks:
+  internal_network:
